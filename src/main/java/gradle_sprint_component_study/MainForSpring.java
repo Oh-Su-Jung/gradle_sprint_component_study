@@ -60,7 +60,7 @@ public class MainForSpring {
 			return;
 		}
 		
-		MemberRegisterService regSvc = ctx.getBean("MemberRegSvc", MemberRegisterService.class);
+		MemberRegisterService regSvc = ctx.getBean(MemberRegisterService.class);
 		//MemberRegisterService regSvc = assembler.getMemberRegisterService();
 		
 		RegisterRequest req = new RegisterRequest();
@@ -87,7 +87,7 @@ public class MainForSpring {
 			return;
 		}
 		
-		ChangePasswordService changePwdSvc = ctx.getBean("ChangePwdSvc", ChangePasswordService.class);
+		ChangePasswordService changePwdSvc = ctx.getBean(ChangePasswordService.class);
 		//ChangePasswordService changePwdSvc = assembler.getChangePasswordService();
 		
 		try {
