@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import gradle_sprint_component_study.config.AppCtx;
+import gradle_sprint_component_study.config.AppCtxWithExclude;
 import gradle_sprint_component_study.spring.ChangePasswordService;
 import gradle_sprint_component_study.spring.DuplicateMemberException;
 import gradle_sprint_component_study.spring.MemberInfoPrinter;
@@ -22,7 +22,7 @@ public class MainForSpring {
 	private static ApplicationContext ctx = null;
 
 	public static void main(String[] args) throws IOException {
-		ctx = new AnnotationConfigApplicationContext(AppCtx.class);
+		ctx = new AnnotationConfigApplicationContext(AppCtxWithExclude.class);
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		while (true) {
